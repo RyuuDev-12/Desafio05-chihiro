@@ -1,0 +1,115 @@
+:root{
+    --verde-escuro: #1a4955;
+    --verde-claro: #628e75;
+    --cinza: #f9f9f9;
+}
+/* reset */
+*{
+    color:white;
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    list-style: none;
+}
+
+i{
+    color: white !important;
+}
+
+
+body{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom right, var(--verde-claro), var(--verde-escuro));
+}
+
+/* header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10% 0;
+}
+
+header img{
+    height: 7rem;
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+}
+
+header li{
+    margin: 0 1rem;
+}
+
+/* main */
+
+main{
+    justify-content: space-between;
+    display: flex;
+    padding: 0 10%;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+h1{
+    margin: 2rem 0;
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 7.5rem;
+}
+
+p{
+    font-size: 2rem;
+    width: 52rem;
+}
+
+button{
+    width: 25rem;
+    font-size: 3rem;
+    color: white;
+    background-color: var(--verde-claro);
+    padding: 10px 20px;
+    line-height: 1;
+    border: none;
+    transform: skewX(-25deg);
+    cursor: pointer;
+    margin: 5rem 1rem;
+    padding: 1.5rem;
+}
+
+span {
+    text-align: end;
+    width: 19rem;
+    display: block;
+    transform: skewX(25deg);
+
+}
+.gg-shape-triangle{
+    width: 2rem;
+    position: relative;
+    margin-bottom: -1.7rem;
+    margin-left: 1.5rem;
+    display: block;
+    transform: rotate(90deg);
+}
+
+.ilustracao{
+    height: 43rem;
+}
+
+.trailer{
+    color: var(--verde-claro);
+    background-color: transparent;
+    border: 2px solid var(--verde-claro);
+}
+
+button.trailer{
+    width: calc(25rem - 2px);
+    height: 5rem;
+}
