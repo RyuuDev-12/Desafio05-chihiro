@@ -3,7 +3,9 @@
     --verde-claro: #628e75;
     --cinza: #f9f9f9;
 }
+
 /* reset */
+
 *{
     color:white;
     font-size: 62.5%;
@@ -12,12 +14,9 @@
     font-family: 'Poppins';
     list-style: none;
 }
-
 i{
     color: white !important;
 }
-
-
 body{
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -27,54 +26,48 @@ body{
 /* header */
 
 header{
-    display: flex;
-    justify-content: space-between;
     padding: 2rem 10% 0;
 }
-
+header, header ul{
+    display: flex;
+}
 header img{
     height: 7rem;
 }
-
 header ul{
-    display: flex;
     align-items: center;
 }
-
 header li{
     margin: 0 1rem;
 }
 
 /* main */
 
-main{
+main, header{
     justify-content: space-between;
+}
+main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     flex-wrap: nowrap;
     padding: 0 10%;
 }
-
 main > div{
     width: 55rem;
 }
-
 h2{
     font-size: 2.5rem;
 }
-
 h1{
     margin: 2rem 0;
     font-size: 7rem;
     font-weight: 900;
     line-height: 7.5rem;
 }
-
 p{
     font-size: 2rem;
     width: 52rem;
 }
-
 button{
     width: 25rem;
     font-size: 3rem;
@@ -89,7 +82,6 @@ button{
     padding: 1.5rem;
     text-decoration: none;
 }
-
 span {
     text-align: end;
     width: 19rem;
@@ -105,7 +97,6 @@ span {
     display: block;
     transform: rotate(90deg);
 }
-
 .ilustracao{
     position: relative;
     height: 20rem;
@@ -113,7 +104,6 @@ span {
     height: 43rem;
     animation: flutuar 4s infinite;
 }
-
 .trailer{
     color: var(--verde-claro);
     background-color: transparent;
@@ -121,14 +111,14 @@ span {
     width: 25rem;
     height: 5.2rem;
 }
-
+.trailer:hover::before, .film::before, .film:hover::before{
+    background-color: var(--verde-claro);
+}
 .trailer:hover::before{
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: var(--verde-claro);
 }
-
 .trailer:before{
     height: 0%;
     width: 100%;
@@ -138,12 +128,10 @@ span {
     top: 0;
     transition: .3s;
 }
-
 .film{
     border: .2rem solid var(--verde-claro);
     background-color: transparent;
 }
-
 .film::before{
     height: 100%;
     width: 100%;
@@ -151,16 +139,15 @@ span {
     position: absolute;
     right: 0;
     top: 0;
-    background-color: var(--verde-claro);
     transition: .3s;
 }
-
 .film:hover::before{
     height: 0%;
     width: 100%;
     position: absolute;
-    background-color: var(--verde-claro);
 }
+
+/* Animções */
 
 @keyframes flutuar {
     0%, 100%{
@@ -170,6 +157,8 @@ span {
         top: 0;
     }
 }
+
+/* Responsivo */
 
 @media(max-width:1300px){
     main{
@@ -186,35 +175,28 @@ span {
         grid-row: 2/3;
     }
 }
-
 @media (max-width:690px) {
     .texto *{
         margin: 0 10%;
         width: 80%;
     }
-
     h1{
         height: 18rem;
         padding-top: 2rem;
         font-size: 6rem;
         line-height: 7rem;
     }
-
     .ilustracao{
         height: 30rem;
         position: relative;
     }
-
     .trailer{
         display: none;
     }
-
     .film{
         margin-left: 12%;
     }
-
 }
-
 @media (max-width:550px) {
     h1{
         font-size: 10vw !important;
